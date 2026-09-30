@@ -1,0 +1,46 @@
+/* Message metadata uses the chat width; small media never shrinks its header. */
+.msg-row .bubble.has-attachments,
+.msg-row .bubble.has-sticker {
+  width:calc(100% - 52px);
+  max-width:calc(100% - 52px);
+}
+.bubble.has-attachments > .att-gallery { width:100%; max-width:520px; }
+.bubble.has-sticker > .sticker-message { width:min(168px,100%); max-width:100%; }
+.bubble-top { flex-wrap:wrap; row-gap:6px; }
+.bubble-top > .bubble-name { flex-shrink:0; max-width:100%; }
+.bubble-top > .bubble-time { flex:none; }
+.message-seen { flex:0 1 auto; max-width:100%; }
+.message-seen-avatars {
+  flex-wrap:nowrap;
+  min-width:24px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  scrollbar-width:thin;
+}
+.message-seen-label { white-space:nowrap; }
+body[data-mobile-ui="1"] .msg-row :is(.bubble.has-attachments,.bubble.has-sticker) {
+  width:calc(100% - 42px);
+  max-width:calc(100% - 42px);
+}
+body[data-companion-chat="1"] .msg-row :is(.bubble.has-attachments,.bubble.has-sticker) {
+  flex:1 1 0;
+  width:0;
+  max-width:100%;
+}
+
+/* The avatar spans the display-name line through the first message line. The
+   shared geometry observer also handles wrapped headers and reply previews. */
+.msg-row { --message-line-height:20.3px; }
+body[data-mobile-ui="1"] .msg-row { --message-line-height:22.2px; }
+.msg-row > .msg-avatar,
+body[data-mobile-ui="1"] .msg-row > .msg-avatar,
+.msg-row.has-reply > .msg-avatar {
+  width:var(--message-avatar-size,40.6px);
+  height:var(--message-avatar-size,40.6px);
+  margin-top:var(--message-avatar-offset,4px);
+}
+.msg-row > .bubble,
+.msg-row > .bubble:is(.has-attachments,.has-sticker),
+body[data-mobile-ui="1"] .msg-row > .bubble:is(.has-attachments,.has-sticker) {
+  max-width:calc(100% - var(--message-avatar-size,40.6px) - 10px);
+}

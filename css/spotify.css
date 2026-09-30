@@ -1,0 +1,24 @@
+.spotify-activity-icon { color: #1ed760; display: inline-flex; width: 16px; height: 16px; flex: 0 0 16px; vertical-align: middle; }
+.spotify-activity-icon svg { width: 100%; height: 100%; }
+.user-profile-spotify { width: 100%; min-width: 0; margin-top: 12px; padding: 12px; border: 1px solid rgba(30,215,96,.18); border-radius: 10px; background: rgba(30,215,96,.055); box-sizing: border-box; }
+.spotify-listening-label { color: #86d9a1; display: flex; align-items: center; gap: 7px; margin-bottom: 10px; font-size: 11px; font-weight: 650; }
+.spotify-track-row { display: flex; gap: 10px; align-items: center; min-width: 0; }
+.spotify-album-art { width: 48px; height: 48px; flex: 0 0 48px; object-fit: cover; border-radius: 5px; }
+.spotify-album-placeholder { display: grid; place-items: center; background: #1b3825; color: #9ee3b5; font-size: 24px; }
+.spotify-track-copy { min-width: 0; flex: 1; }
+.spotify-track-name, .spotify-track-artist { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.spotify-track-name { color: #e7f2ec; font-size: 13px; font-weight: 650; }
+.spotify-track-artist { color: #a8bdb0; font-size: 12px; margin-top: 3px; }
+.spotify-play { display: grid; place-items: center; width: 34px; height: 34px; flex: 0 0 34px; border-radius: 50%; background: #1ed760; color: #102316; text-decoration: none; transition: transform .15s ease, background .15s ease; }
+.spotify-play svg { width: 20px; height: 20px; }
+.spotify-play:hover { background: #64ec92; transform: scale(1.05); }
+.spotify-play:focus-visible { outline: 2px solid white; outline-offset: 3px; }
+.members-sidebar .member-sub.has-spotify { display: flex; align-items: center; flex-wrap: nowrap; min-width: 0; gap: 0; }
+.member-sub.has-spotify .member-class-text { flex: 0 1 auto; min-width: 0; max-width: 45%; overflow: hidden; text-overflow: ellipsis; }
+.member-status-separator { flex: 0 0 auto; white-space: pre; }
+.member-spotify-text { display: flex; align-items: center; gap: 4px; min-width: 0; flex: 1; color: #91cfaa; }
+.member-spotify-text > span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.member-spotify-text .spotify-activity-icon { width: 12px; height: 12px; flex-basis: 12px; }
+.spotify-account-controls { display: flex; gap: 10px; margin-top: 15px; }
+.spotify-account-status { color: #a8b6c7; font-size: 12px; line-height: 1.5; margin: 10px 0 0; }
+.spotify-account-controls [hidden] { display: none; }
