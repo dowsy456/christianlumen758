@@ -1,0 +1,9 @@
+{
+  "desktopVersion": "1.4.4",
+  "webVersion": "2026.9.29-1",
+  "assetRevision": "20260929-performance-call-1",
+  "createdAt": "2026-09-30T01:14:03.900Z",
+  "source": "Shared room performance and call improvements; native capture-selection bridge.",
+  "nativeBridge": 1,
+  "mobileRevision": 2026092901
+}
